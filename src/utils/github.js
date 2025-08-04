@@ -1,6 +1,28 @@
 import axios from 'axios';
 import { logWarning } from './errors.js';
 
+// Default documentation files to exclude from command installation
+const DEFAULT_EXCLUDED_FILES = [
+  'readme',
+  'claude'
+];
+
+/**
+ * Check if a markdown file should be excluded from command installation
+ * @param {string} fileName - File name without extension
+ * @returns {boolean} True if file should be excluded
+ */
+export function shouldExcludeFile(fileName) {
+  // Handle invalid inputs
+  if (typeof fileName !== 'string' || !fileName) {
+    return false;
+  }
+  
+  // Simple case-insensitive check
+  const normalizedName = fileName.toLowerCase();
+  return DEFAULT_EXCLUDED_FILES.includes(normalizedName);
+}
+
 export function parseRepositoryPath(repoPath) {
   const parts = repoPath.split('/');
   
@@ -74,10 +96,17 @@ export async function findMarkdownFiles(user, repo, basePath = '', branch = 'mai
     
     for (const item of contents) {
       if (item.type === 'file' && item.name.endsWith('.md')) {
+        const fileName = item.name.replace('.md', '');
+        
+        // Skip documentation files
+        if (shouldExcludeFile(fileName)) {
+          continue;
+        }
+        
         const relativePath = basePath ? `${basePath}/${item.name}` : item.name;
         files.push({
           path: relativePath,
-          name: item.name.replace('.md', ''),
+          name: fileName,
           fullPath: item.path
         });
       } else if (item.type === 'dir') {
