@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.4.0](https://github.com/hiragram/cccsc/compare/v0.3.2...v0.4.0) (2025-08-04)
+
+
+### Features
+
+* exclude documentation files from command installation ([2d5ea42](https://github.com/hiragram/cccsc/commit/2d5ea420835c84eb6f59029ad481516952bc6b63))
+* exclude documentation files from command installation ([454508c](https://github.com/hiragram/cccsc/commit/454508cbe236e0f359a72ba48033cd8083e239a1))
+* implement comprehensive code quality improvements ([d570cbc](https://github.com/hiragram/cccsc/commit/d570cbc9242f8b010cdf831f23a388f3ea56790e))
+
+
+### Bug Fixes
+
+* address additional code review feedback ([2aff75b](https://github.com/hiragram/cccsc/commit/2aff75b1a8034fb83e6b1234dd7131196a64a6ec))
+* address code review feedback ([86d754e](https://github.com/hiragram/cccsc/commit/86d754e21c08b6c2c0d446a5e08e3c251e317cdf))
+* change lockfile only field from string array to object array ([a3be095](https://github.com/hiragram/cccsc/commit/a3be0955c8359eac1dbdf946d6bec1f223d515db))
+* CI failures for lint and tests ([b4b97a3](https://github.com/hiragram/cccsc/commit/b4b97a36246f0fa5846970fc6031ba90d59ff09e))
+* comprehensive fixes for final code review ([dbcadd6](https://github.com/hiragram/cccsc/commit/dbcadd63938731190980e634788b20307cd52808))
+* ensure name field is always original command name ([6660a91](https://github.com/hiragram/cccsc/commit/6660a91eb34c3794d5fd291c2222cf165d2ee676))
+* ensure name field is always original command name ([5c218f7](https://github.com/hiragram/cccsc/commit/5c218f70200c3456ac3508ac99cce6d1b8e670ab))
+* restore console.log statements for CLI feedback and fix tests ([1007d0d](https://github.com/hiragram/cccsc/commit/1007d0dbc43ecc9bd43505cae31af15e948bde0e))
+* update lockfile version to 3 for npm compatibility ([c0be9e3](https://github.com/hiragram/cccsc/commit/c0be9e3066b987faeb1bf1cc37f7430959277ebb))
+* update lockfile version to 3 for npm compatibility ([df18f78](https://github.com/hiragram/cccsc/commit/df18f785f37d60ad5f485f8b46bd9835980e8cf0))
+* update test to expect lockfileVersion 3 ([37c34d0](https://github.com/hiragram/cccsc/commit/37c34d0f0d7d1b3250cacda35d25fd501f3fc474))
+
 ## [0.3.2](https://github.com/hiragram/cccsc/compare/v0.3.1...v0.3.2) (2025-07-03)
 
 
